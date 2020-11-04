@@ -3,4 +3,4 @@ import requestLogging from "./requestLogging";
 import unknownEndpoint  from "./unknownEndpoint";
 import errorHandler from "./errorHandler";
 
-export {requestLogging,unknownEndpoint,errorHandler };
+export {requestLogging,unknownEndpoint,errorHandler};
