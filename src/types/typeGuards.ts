@@ -5,7 +5,7 @@ export const isString = (text: unknown): text is string => {
   };
 
 export const isNum = (num: unknown): num is number  =>{
-    return typeof num === 'number';
+    return typeof num === 'number' && !isNaN(num);
 };
 
 export const isWeatherData = (weatherData: unknown): weatherData is WeatherData =>{

@@ -7,10 +7,8 @@ import mongoDBConnect from './services/connect';
 import {PORT,connectionUri} from './utils/config';
 import {unknownEndpoint, errorHandler, requestLogging} from './utils/middleware';
 
-
 const app = express();
 app.use(express.json());
-
 if (connectionUri) {
   mongoDBConnect(connectionUri);
 }
