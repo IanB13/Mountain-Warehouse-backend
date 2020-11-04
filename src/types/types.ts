@@ -22,3 +22,20 @@ export interface MainTemp {
     temp_min: number
     temp_max: number
 }
+
+export interface Item {
+    name: string
+    imageURL: string
+    itemURL: string
+    tags : Tag[]
+}
+
+export enum Tag {
+    rain,
+    snow,
+    extremeCold,
+    cold,
+    temperate,
+    mild,
+    hot
+}
