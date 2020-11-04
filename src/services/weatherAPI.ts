@@ -15,6 +15,7 @@ const weatherAPI = async (lat : number ,lon: number):Promise<WeatherData | null>
     try {
         const request = await axios.get("https://api.openweathermap.org/data/2.5/weather",config);
         const weatherData = parseWeatherData(request.data);
+        console.log(weatherData);
         return weatherData;
     } catch (error) {
         console.log(error);
