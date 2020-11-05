@@ -12,7 +12,7 @@ itemRouter.get('/', async (request, response) => {
     console.log(request.query);
     const tags = request.query.tags;
     if(tags){
-        const items = await Item.find( { "tags": { "$in": ["Cold"] } });
+        const items = await Item.find( { "tags": { "$in": tags } });
         response.status(200).json(items);
     }
     else{
