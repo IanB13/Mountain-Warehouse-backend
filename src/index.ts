@@ -6,8 +6,11 @@ import itemRouter from './controllers/items';
 import mongoDBConnect from './services/connect';
 import {PORT,connectionUri} from './utils/config';
 import {unknownEndpoint, errorHandler, requestLogging} from './utils/middleware';
+import cors from 'cors';
+
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 if (connectionUri) {
   mongoDBConnect(connectionUri);
