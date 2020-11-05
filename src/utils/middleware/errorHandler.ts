@@ -7,7 +7,6 @@ const errorHandler = (
     response: express.Response, 
     next: express.NextFunction
 ): void => {
-  console.log("IN ERROR HANDLER DAIUDHWUAID");
     const status = error.status || 500;
     const message = error.message || 'Something went wrong';
     response
