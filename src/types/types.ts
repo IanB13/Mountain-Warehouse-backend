@@ -2,6 +2,7 @@ export interface WeatherData {
     coord: Coord
     weather: Weather[]
     main: MainTemp
+    tags?: Tag[]
 }
 
 export interface Coord {
@@ -31,13 +32,14 @@ export interface Item {
 }
 
 export enum Tag {
-    rain,
-    snow,
-    extremeCold,
-    cold,
-    temperate,
-    mild,
-    hot
+    rain = 'Rain',
+    snow = 'Snow',
+    extremeCold = 'ExtremeCold',
+    veryCold = 'VeryCold',
+    cold = 'Cold',
+    mild = 'Mild',
+    warm = 'Warm',
+    hot = 'Hot'
 }
 
 export class HttpException extends Error {
