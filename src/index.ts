@@ -7,7 +7,7 @@ import mongoDBConnect from './services/connect';
 import {PORT,connectionUri} from './utils/config';
 import {unknownEndpoint, errorHandler, requestLogging} from './utils/middleware';
 import cors from 'cors';
-
+import path from 'path';
 
 const app = express();
 app.use(cors());
@@ -18,7 +18,7 @@ if (connectionUri) {
 else {
   console.error("no connection string specified");
 }
-
+app.use( express.static( path.join( __dirname, "reactbuild" ) ) );
 app.use(requestLogging);
 app.get('/ping', (_req, res) => {
   console.log('someone pinged here');

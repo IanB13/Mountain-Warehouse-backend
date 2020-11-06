@@ -6,7 +6,8 @@
   "scripts": {
     "tsc": "tsc",
     "dev": "ts-node-dev src/index.ts",
-    "lint": "eslint --ext .ts ."
+    "lint": "eslint --ext .ts .",
+    "build:frontend": "cd src && del /q build && cd ../../mountain-warehouse-frontend && npm run build --prod && Xcopy /E /q /Y build ..\\mountain-warehouse-backend\\src\\reactBuild\\"
   },
   "author": "Ian Blair",
   "license": "ISC",
